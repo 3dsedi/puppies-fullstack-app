@@ -1,0 +1,270 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  overflow: hidden;
+}
+
+button{
+  background-color: #282c34;
+  color: white;
+  border: #fbfbfc solid 1px;
+  border-radius: 10%;
+  z-index: 1;
+  height: 23px
+}
+
+button:hover{
+  background-color: white;
+  color: #282c34;
+}
+
+label{
+  width: 20%;
+}
+
+
+p{
+  line-height: 0.8;
+}
+
+.puppyContainer{
+  position: relative;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.puppyCard{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: white solid 1px;
+  border-radius: 25px;
+  margin:1rem;
+  padding: 1rem;
+}
+
+
+.puppyCard_desc{
+  margin-top: -1.7rem;
+}
+
+.button_delete{
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+
+
+.puppyCard_buttons{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+
+
+/* .puppyCardDetail{
+  width: 13em;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #282c34;
+  border: #fbfbfc solid 1px;
+  border-radius: 25px;
+} */
+
+.puppyCardDetail p{
+  line-height: 0;
+}
+
+
+/* .puppyCardEditing {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(94, 95, 96, 0.835);
+  margin-top: -2rem;
+  width: 100vw;
+  height:70vh;
+  
+} */
+
+.coverLayer{
+  position: absolute;
+  z-index: 4;
+  background-color: rgba(94, 95, 96, 0.835);
+  width: 150vw;
+  height: 400vw;
+  margin-left: -50vw;
+  margin-top: -100vh;
+}
+
+.puppyCardEditing, .puppyCardDetail {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  height: auto;
+  background-color: #282c34;
+  border: #fbfbfc solid 1px;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.puppyCardDetail button{
+  margin-bottom: -20px;
+}
+
+.form_editing{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form_editing p{
+  margin-block-start: -1em;
+  margin-block-end: 0;
+}
+
+
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  border: white solid 1px;
+  border-radius: 25px;
+  width: 60vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  margin:2rem;
+
+}
+
+.form{
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.form p{
+  font-size: medium;
+  align-self: flex-start;
+  justify-self: flex-start;
+  text-align: left;
+  line-height: 110%;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  
+}
+
+input{
+  height: 25px;
+}
+
+.inputField1 {
+  height: 18px;
+  margin-left: 5px;
+  width: 95%;
+  align-self: flex-end;
+}
+
+.inputField2{
+  height:18px;
+  margin-left:5px
+}
+
+.btn{
+  height: 30px;
+  width: 120px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+
+img{
+  width: 20vw;
+  height: auto;
+}
+
+
+@media  (max-width: 481px) {
+  h1{
+    font-size: x-large;
+  }
+
+  h2{
+    font-size: larger;
+  }
+
+  .puppyContainer {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      margin-left: 17%;
+      width: 100vw;
+  }
+  .puppyCard{
+    width: 60%;
+  }
+
+  .formContainer{
+    width: 90vw;
+  }
+
+  .puppyCardDetail {
+    margin-top: -340%;
+    height: 300vh;
+  }
+
+  .puppyCardEditing{
+    margin-top: -370%;
+    height: 300vh;
+  }
+
+  .puppyCardEditing_block{
+    width: 90%;
+    margin-top: 100%;
+  }
+
+  img {
+    width: 50vw;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .puppyContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

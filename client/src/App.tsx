@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { PuppyList } from "./components/PuppyList";
+import { PuppyList } from "./components/PuppyList2";
 import { Puppy } from "../../server/models/puppy";
 import { AddPuppyForm } from "./components/AddPuppyForm";
+import { PuppyCard } from "./components/PuppyCard";
+import './App.css';
 
 function App() {
-  const [puppyList, setPuppyList] = useState<Puppy[]>([]);
+  const [puppy, setPuppy] = useState<Puppy[]>([]);
 
   const fetchData = async () => {
     const response = await fetch("http://localhost:8000/api/puppies");
     const data = await response.json();
     const puppies = data.puppies;
-    setPuppyList(puppies);
+    setPuppy(puppies);
   };
 
   useEffect(() => {
@@ -36,32 +38,57 @@ function App() {
 
     if (response.status === 201) {
       const result = await response.json();
-      setPuppyList(result.puppies);
+      setPuppy(result.puppies);
     }
       
   };
    
   const removePuppyHandler = async(id: number)  => {
-    const response = await fetch( `http://localhost:8000/api/puppies/${id}`, {
+    await fetch( `http://localhost:8000/api/puppies/${id}`, {
       method: "DELETE",
       mode: "cors",
     })
-    if (response.status === 204) {
-      const result = await response.json();
-      console.log(result)
-      setPuppyList(result.puppies);
-    }
-   
-  
+    // if (response.status === 200) {
+    //   const result = await response.json();
+    //   setPuppyList(result.puppies);
+    // }
+    fetchData()
   };
 
+  const updatePuppyHandler = async(id: number, updatePuppy: {
+    name: string;
+    breed: string;
+    birthDate: string;
+  })  => {
+    console.log('update working')
+    const {name, breed, birthDate } = updatePuppy
+    const reqBody = { name, breed, birthDate, id}
+    await fetch( `http://localhost:8000/api/puppies/${id}`, {
+      method: "PUT",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify(reqBody),
+    })
+    fetchData()
+  };
+    
+  const PuppyList = () =>
+  <main className='puppyContainer'>
+    {puppy?.map((p,index) =>
+      <PuppyCard
+        key={index}
+        puppy={p}
+        onDeletePuppy={removePuppyHandler}
+        onUpdatePuppy={updatePuppyHandler}
+      />)}
+  </main>
 
   return (
     <div className="App">
       <AddPuppyForm  savePuppy={puppyAddHandler}/>
-      <PuppyList puppies={puppyList}
-        onDeletePuppy={removePuppyHandler}
-      />
+      <PuppyList  />
     </div>
   );
 }
