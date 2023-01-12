@@ -22,7 +22,7 @@ function App() {
   const puppyAddHandler = async (enteredPuppy: {
     name: string;
     breed: string;
-    birthDate: string;
+    birthDate: string
   }) => {
     // console.log(enteredPuppy)
     const { name, breed, birthDate } = enteredPuppy;
@@ -62,7 +62,7 @@ function App() {
   })  => {
     console.log('update working')
     const {name, breed, birthDate } = updatePuppy
-    const reqBody = { name, breed, birthDate, id}
+    const reqBody = { name, breed, birthDate,id}
     await fetch( `http://localhost:8000/api/puppies/${id}`, {
       method: "PUT",
       mode: "cors",
@@ -87,6 +87,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="header">
+      <h3>Wellcome To Puppy Home </h3>
+      <h5>Select Your Puppy to Adopt</h5>
+      <h5>Or Add Your Puppy </h5>
+      </div>
       <AddPuppyForm  savePuppy={puppyAddHandler}/>
       <PuppyList  />
     </div>

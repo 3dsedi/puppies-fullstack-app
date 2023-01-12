@@ -1,27 +1,32 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #e1e1e1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(67, 64, 64);
   overflow: hidden;
 }
-
+.header {
+  text-align: center;
+  margin-bottom: -50px;
+}
 button{
-  background-color: #282c34;
-  color: white;
-  border: #fbfbfc solid 1px;
-  border-radius: 10%;
+  background-color: #f8f8f8;
+  color: blueviolet;
+  border: blueviolet solid 1px;
+  border-radius: 20%;
   z-index: 1;
+  font-size: 10px;
   height: 23px
 }
 
+
 button:hover{
-  background-color: white;
+  background-color: rgb(43, 226, 70);
   color: #282c34;
 }
 
@@ -43,6 +48,8 @@ p{
 
 
 .puppyCard{
+  background-color: #ededed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -58,8 +65,16 @@ p{
 }
 
 .button_delete{
+  background-color: blueviolet;
   align-self: flex-end;
   justify-self: flex-start;
+  color: rgb(231, 231, 231);
+  border: #ffffff solid 1px;
+  border-radius: 30%;
+  z-index: 1;
+  font-size: 10px;
+  height: 23px
+  
 }
 
 
@@ -69,10 +84,7 @@ p{
   
 }
 
-
-
-
-/* .puppyCardDetail{
+.puppyCardDetail{
   width: 13em;
   height: auto;
   display: flex;
@@ -82,25 +94,11 @@ p{
   background-color: #282c34;
   border: #fbfbfc solid 1px;
   border-radius: 25px;
-} */
+} 
 
 .puppyCardDetail p{
   line-height: 0;
 }
-
-
-/* .puppyCardEditing {
-  position: absolute;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(94, 95, 96, 0.835);
-  margin-top: -2rem;
-  width: 100vw;
-  height:70vh;
-  
-} */
 
 .coverLayer{
   position: absolute;

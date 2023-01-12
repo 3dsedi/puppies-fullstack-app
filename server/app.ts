@@ -6,16 +6,16 @@ const bodyParser = require('body-parser')
 const cors = require('cors');
 
  const PUPPIES : Puppy[] =[
-  {id: 123 , breed: 'husky', name:'snow man', birthDate:'21.09.1986'},
+  {id: 123 , breed: 'husky', name:'Snow Man', birthDate:'21.09.1986'},
   {id: 124 , breed: 'sarabi', name:'SAG', birthDate:'21.09.1983'},
-  {id: 125 , breed: 'golden retriever', name:'goldi', birthDate:'21.09.1983'},
-  {id: 126 , breed: 'french bulldog', name:'martin', birthDate:'21.09.1983'},
-  {id: 127 , breed: 'beagle', name:'peggy', birthDate:'21.09.1983'},
-  {id: 128 , breed: 'poodle', name:'teddy', birthDate:'21.09.1983'},
-  {id: 129 , breed: 'golden retriever', name:'golden hair', birthDate:'21.09.1983'},
-  {id: 130 , breed: 'german shepherd', name:'rex', birthDate:'21.09.1983'},
-  {id: 131 , breed: 'afghan hound', name:'nikol', birthDate:'21.09.1983'},
-  {id: 132 , breed: 'german shepherd', name:'nina', birthDate:'21.09.1983'},
+  {id: 125 , breed: 'golden retriever', name:'Goldi', birthDate:'21.09.1983'},
+  {id: 126 , breed: 'french bulldog', name:'Martin', birthDate:'21.09.1983'},
+  {id: 127 , breed: 'beagle', name:'Peggy', birthDate:'21.09.1983'},
+  {id: 128 , breed: 'poodle', name:'Teddy', birthDate:'21.09.1983'},
+  {id: 129 , breed: 'golden retriever', name:'Goli', birthDate:'21.09.1983'},
+  {id: 130 , breed: 'german shepherd', name:'Rex', birthDate:'21.09.1983'},
+  {id: 131 , breed: 'afghan hound', name:'Nikol', birthDate:'21.09.1983'},
+  {id: 132 , breed: 'german shepherd', name:'Nina', birthDate:'21.09.1983'},
  ];
 
 const app: Application = express();

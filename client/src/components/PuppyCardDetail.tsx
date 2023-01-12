@@ -15,6 +15,7 @@ export const PuppyCardDetail = ({ puppy, closeDetails }: Props) => {
     <p>Name: {name}</p>
     <p>BirthDay: {birthDate}</p>
     <p>Breed: {breed}</p>
+    <img alt="pic" src="https://loremflickr.com/320/240/dog" />
   </div>
   )
 }

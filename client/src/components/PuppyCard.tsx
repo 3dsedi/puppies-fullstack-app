@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const PuppyCard = ({ puppy, onDeletePuppy, onUpdatePuppy }: Props) => {
-  const { name, id } = puppy || {};
+  const { name, id } = puppy;
   const [isEditing, setIsEditing] = useState<boolean>();
   const [showDetails, setShowDetails] = useState<boolean>();
   return (
@@ -36,10 +36,18 @@ export const PuppyCard = ({ puppy, onDeletePuppy, onUpdatePuppy }: Props) => {
         <button
           className="button_delete"
           onClick={() => onDeletePuppy(id as number)}
-        >Delete
+        >
+          Delete
         </button>
         <div className="puppyCard_desc">
-          <p>Name: {name}</p>
+          <p>{name}</p>
+          <img
+            alt="pic"
+            src="https://loremflickr.com/320/240/dog"
+            style={{
+              borderRadius: 20,
+            }}
+          />
         </div>
         <div className="puppyCard_buttons">
           <button onClick={() => setIsEditing(true)}>
