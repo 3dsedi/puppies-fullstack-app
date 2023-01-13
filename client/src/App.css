@@ -8,7 +8,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(67, 64, 64);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .header {
   text-align: center;
@@ -26,8 +26,9 @@ button{
 
 
 button:hover{
-  background-color: rgb(43, 226, 70);
+  background-color: rgb(210, 212, 210);
   color: #282c34;
+  cursor: pointer;
 }
 
 label{
@@ -91,7 +92,7 @@ p{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #282c34;
+  /* background-color: #282c34; */
   border: #fbfbfc solid 1px;
   border-radius: 25px;
 } 
@@ -121,7 +122,7 @@ p{
   align-items: center;
   width: 35vw;
   height: auto;
-  background-color: #282c34;
+  background-color: rgb(169, 123, 211);
   border: #fbfbfc solid 1px;
   border-radius: 25px;
   padding: 15px;
@@ -242,6 +243,7 @@ img{
     margin-top: -340%;
     height: 300vh;
   }
+  
 
   .puppyCardEditing{
     margin-top: -370%;

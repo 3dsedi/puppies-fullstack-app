@@ -7,7 +7,7 @@ interface Props {
     closeDetails: Function
   }
 export const PuppyCardDetail = ({ puppy, closeDetails }: Props) => {
-    const { id, name, breed, birthDate} = puppy
+    const { id, name, breed, birthDate, img} = puppy
   return (
     <div className='puppyCardDetail'>
     <button className='button_delete' onClick={() => closeDetails() }>X</button>
@@ -15,7 +15,7 @@ export const PuppyCardDetail = ({ puppy, closeDetails }: Props) => {
     <p>Name: {name}</p>
     <p>BirthDay: {birthDate}</p>
     <p>Breed: {breed}</p>
-    <img alt="pic" src="https://loremflickr.com/320/240/dog" />
+    <img alt="pic" src={img} />
   </div>
   )
 }

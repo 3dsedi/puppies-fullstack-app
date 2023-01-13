@@ -3,9 +3,10 @@
     max-width: 40rem;
     margin: 2rem auto;
     padding: 0;
-  }
+  } 
   
   .from__itemes {
+    
     align-items: center;
     justify-content: center;
     background-color: blueviolet;
@@ -24,4 +25,13 @@
   }
   .form__input{
     width: 100px;
+  }
+
+  @media  (max-width: 670px) {
+    .from__itemes{
+      width: 300px;
+    }
+    .form__input{
+      width: 50px;
+    }
   }

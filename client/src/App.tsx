@@ -22,11 +22,11 @@ function App() {
   const puppyAddHandler = async (enteredPuppy: {
     name: string;
     breed: string;
-    birthDate: string
+    birthDate: string;
   }) => {
     // console.log(enteredPuppy)
     const { name, breed, birthDate } = enteredPuppy;
-    const reqBody = { name, breed, birthDate, id: Date.now() };
+    const reqBody = { name, breed, birthDate,img : 'https://loremflickr.com/320/240/cute_puppy', id: Date.now() };
     const response = await fetch("http://localhost:8000/api/puppies", {
       mode: 'cors',
       method: "POST",
@@ -34,10 +34,12 @@ function App() {
         "Content-Type": "application/json; charset=utf-8",
       },
       body: JSON.stringify(reqBody),
+      
     });
 
     if (response.status === 201) {
       const result = await response.json();
+      console.log(result)
       setPuppy(result.puppies);
     }
       

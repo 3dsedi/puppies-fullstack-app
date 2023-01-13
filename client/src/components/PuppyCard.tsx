@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const PuppyCard = ({ puppy, onDeletePuppy, onUpdatePuppy }: Props) => {
-  const { name, id } = puppy;
+  const { name, id, img } = puppy;
   const [isEditing, setIsEditing] = useState<boolean>();
   const [showDetails, setShowDetails] = useState<boolean>();
   return (
@@ -43,7 +43,7 @@ export const PuppyCard = ({ puppy, onDeletePuppy, onUpdatePuppy }: Props) => {
           <p>{name}</p>
           <img
             alt="pic"
-            src="https://loremflickr.com/320/240/dog"
+            src={img}
             style={{
               borderRadius: 20,
             }}

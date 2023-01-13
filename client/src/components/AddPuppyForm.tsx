@@ -37,7 +37,7 @@ export const AddPuppyForm: React.FC<NewPuppyProps>= (props) => {
       </div>
       <div>
         <label className='form__lable' htmlFor='birth date'>Birth Date</label>
-        <input className='form__input' type='text' id='birth Date' ref={birthDateInputRef} />
+        <input className='form__input' type='date' id='birth Date' ref={birthDateInputRef} />
       </div>
       <div>
         <label className='form__lable' htmlFor='img'>Image</label>
