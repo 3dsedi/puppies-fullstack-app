@@ -26,7 +26,7 @@ function App() {
   }) => {
     // console.log(enteredPuppy)
     const { name, breed, birthDate } = enteredPuppy;
-    const reqBody = { name, breed, birthDate,img : 'https://loremflickr.com/320/240/cute_puppy', id: Date.now() };
+    const reqBody = { name, breed, birthDate,img : 'https://loremflickr.com/320/240/dog', id: Date.now() };
     const response = await fetch("http://localhost:8000/api/puppies", {
       mode: 'cors',
       method: "POST",

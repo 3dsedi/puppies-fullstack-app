@@ -21,6 +21,10 @@ export const AddPuppyForm: React.FC<NewPuppyProps>= (props) => {
             img: imgInputRef.current!.value}
 
         props.savePuppy(enteredPuppy)
+        nameInputRef.current!.value = '';
+        breedInputRef.current!.value = '';
+        birthDateInputRef.current!.value = '';
+        imgInputRef.current!.value = ''
     }
     
 
